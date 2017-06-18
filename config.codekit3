@@ -9,6 +9,12 @@
 	],
 "creatorBuild": "25813",
 "files": {
+	"\/.gitignore": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/.gitignore",
+		"oF": 0
+		},
 	"\/css\/materialize-min.css": {
 		"aP": 1,
 		"bl": 0,
@@ -28,12 +34,6 @@
 		"oAP": "\/css\/materialize-min.css",
 		"oF": 0,
 		"oS": 0
-		},
-	"\/css\/materialize.css.~1~": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/css\/materialize.css.~1~",
-		"oF": 0
 		},
 	"\/css\/materialize.min.css": {
 		"aP": 1,
@@ -121,8 +121,8 @@
 		"oA": 0,
 		"oAP": "\/graphics\/casics-logo-in-steel-teal.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -141,18 +141,6 @@
 		"oA": 2,
 		"oAP": "\/index.html",
 		"oF": 1
-		},
-	"\/index.html.~1~": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/index.html.~1~",
-		"oF": 0
-		},
-	"\/index.html.~2~": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/index.html.~2~",
-		"oF": 0
 		},
 	"\/js\/init.js": {
 		"ft": 64,
@@ -181,10 +169,10 @@
 		"sC": 1,
 		"tS": 0
 		},
-	"\/LICENSE": {
+	"\/MATERIALIZE-LICENSE": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/LICENSE",
+		"oAP": "\/MATERIALIZE-LICENSE",
 		"oF": 0
 		}
 	},
