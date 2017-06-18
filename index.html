@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>CASICS: Comprehensive and Automated Software Inventory Creation System</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav class="grey lighten-1" role="navigation">
+    <div class="nav-wrapper container">
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <h1 class="header center deep-teal-text"><img width="70px" style="padding-right: 15px"  src="graphics/casics-logo-in-steel-teal.svg" onerror="this.src='graphics/casics-logo-in-steel-teal.png'" />CASICS</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Comprehensive and Automated Software Inventory Creation System</h5>
+        <p class="light">A wealth of software is available, and more is being created.  Yet, <em>finding</em> software for a given purpose remains difficult. Few resources exist to help users discover alternatives or understand the differences between them.</p>
+      </div>
+
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h3 class="center deep-teal-text"><i class="material-icons">explore</i></h3>
+            <h5 class="center">Why not just search in Google?</h5>
+
+            <p class="light">(1) It's often difficult to think of good search terms.
+              (2) Good software can be buried in thousands of search results.
+              (3) Search results don't tell you <em>differences</em> between software features.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h3 class="center deep-teal-text"><i class="material-icons">chat_bubble_outline</i></h3>
+            <h5 class="center">Why not just ask your colleagues?</h5>
+
+            <p class="light">(1) Most people don't know about all the possible options or how the options differ. (2) Answers are potentially biased: what people <em>do</em> know may be out of date or be incorrect.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h3 class="center deep-teal-text"><i class="material-icons">description</i></h3>
+            <h5 class="center">Why not look in the literature?</h5>
+
+            <p class="light">(1) Papers are static, but software evolves rapidly.
+            (2) Not all software projects have a publication associated with them.
+            (3) Looking for software in papers is time-consuming.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row center">
+        <h5 class="header col s12">Why do we care?</h5>
+        <p class="light">Lacking better info, people often don’t use the best options, and sometimes unintentionally recreate existing tools. <strong>Time and money are wasted, reproducibility of research suffers, and funding agencies get poor return on investment</strong>.</p>
+        <p class="light">We believe a <strong>comprehensive software index</strong> could make it easier to find software by providing results grouped along different dimensions and containing specific details about each software resource. This would help users find software more effectively and compare alternatives more systematically.</p>
+      </div>
+
+      <div class="row center">
+        <h4 class="header col s12">What is CASICS?</h4>
+        <p class="light">Software catalogs are not new, but many catalogs failed either because they were too simplistic (providing incomplete or misleading content) or relied on humans. Humans don’t scale well; <strong>automation is the only feasible way</strong> of cataloging the vast and ever-growing number of constantly-evolving software resources.</p>
+        <p class="light">The <em>Comprehensive and Automated Software Inventory Creation System</em> is a project to create a proof of concept.  CASICS uses machine learning techniques to <strong>analyze source code</strong> in software repositories such as GitHub.</p>
+      </div>
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h3 class="center deep-teal-text"><i class="material-icons">fingerprint</i></h3>
+            <h5 class="center">Feature extraction from source files</h5>
+            <p class="light">The features are extracted from source code via language-aware parsers (for identifier names, libraries, doc strings, text strings, comments, etc.).  Identifier expansion methods convert short identifiers (e.g., "readfromdb") to more meaningful strings ("read from database").</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h3 class="center deep-teal-text"><i class="material-icons">view_quilt</i></h3>
+            <h5 class="center">Ontology-based classification</h5>
+            <p class="light">The features are used as input into supervised, hierarchical multi-label classifiers to label software with respect to predefined ontologies. We are using a combination of <a href="https://github.com/allysonlister/swo">SWO</a>, the <a href="http://id.loc.gov">Library of Congress Subject Headings</a>, and custom ontologies.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h3 class="center deep-teal-text"><i class="material-icons">sort</i></h3>
+            <h5 class="center">Hierarchical software catalog</h5>
+            <p class="light">Software can be placed in a hierarchical browser organized by the ontology. Search can be augmented with ontologies to recognize when users are looking for known types of features.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <footer class="page-footer grey">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Project members</h5>
+          <ul>
+            <li><a class="white-text" href="http://www.cds.caltech.edu/~mhucka">Dr. Michael Hucka</a></li>
+            <li><a class="white-text" href="http://www.cacr.caltech.edu/~mjg">Dr. Matthew Graham</a></li>
+            <li><a class="white-text" href="http://www.cds.caltech.edu/~doyle">Dr. John Doyle</a></li>
+          </ul>
+        </div>
+        <div class="col l6 s12">
+          <h5 class="white-text">More information</h5>
+          <ul>
+            <li><a class="white-text" href="#">➜ CASICS home page</a></li>
+            <li><a class="white-text" href="#">➜ More coming soon</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        <small>Produced by <a class="cyan-text text-lighten-3" href="http://www.cds.caltech.edu/~mhucka/">Mike Hucka</a></small>.
+        <small>Page theme modified from <a class="cyan-text text-lighten-3" href="http://materializecss.com">Materialize</a></small>.
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
