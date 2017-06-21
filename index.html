@@ -36,7 +36,7 @@
         <div class="col s12 m4">
           <div class="icon-block">
             <h3 class="center deep-teal-text"><i class="material-icons">explore</i></h3>
-            <h5 class="center">Why not just search in Google?</h5>
+            <h5 class="center light">Why not just search in Google?</h5>
 
             <p class="light">(1) It's often difficult to think of good search terms.
               (2) Good software can be buried in thousands of search results.
@@ -47,7 +47,7 @@
         <div class="col s12 m4">
           <div class="icon-block">
             <h3 class="center deep-teal-text"><i class="material-icons">chat_bubble_outline</i></h3>
-            <h5 class="center">Why not just ask your colleagues?</h5>
+            <h5 class="center light">Why not just ask your colleagues?</h5>
 
             <p class="light">(1) Most people don't know about all the possible options or how the options differ. (2) Answers are potentially biased: what people <em>do</em> know may be out of date or be incorrect.</p>
           </div>
@@ -56,7 +56,7 @@
         <div class="col s12 m4">
           <div class="icon-block">
             <h3 class="center deep-teal-text"><i class="material-icons">description</i></h3>
-            <h5 class="center">Why not look in the literature?</h5>
+            <h5 class="center light">Why not look in the literature?</h5>
 
             <p class="light">(1) Papers are static, but software evolves rapidly.
             (2) Not all software projects have a publication associated with them.
@@ -66,13 +66,13 @@
       </div>
 
       <div class="row center">
-        <h5 class="header col s12">Why do we care?</h5>
+        <h4 class="header light col s12">Why does it matter?</h4>
         <p class="light">Lacking better info, people often don’t use the best options, and sometimes unintentionally recreate existing tools. <strong>Time and money are wasted, reproducibility of research suffers, and funding agencies get poor return on investment</strong>.</p>
         <p class="light">We believe a <strong>comprehensive software index</strong> could make it easier to find software by providing results grouped along different dimensions and containing specific details about each software resource. This would help users find software more effectively and compare alternatives more systematically.</p>
       </div>
 
       <div class="row center">
-        <h4 class="header col s12">What is CASICS?</h4>
+        <h4 class="header light col s12">What is CASICS?</h4>
         <p class="light">Software catalogs are not new, but many catalogs failed either because they were too simplistic (providing incomplete or misleading content) or relied on humans. Humans don’t scale well; <strong>automation is the only feasible way</strong> of cataloging the vast and ever-growing number of constantly-evolving software resources.</p>
         <p class="light">The <em>Comprehensive and Automated Software Inventory Creation System</em> is a project to create a proof of concept.  CASICS uses machine learning techniques to <strong>analyze source code</strong> in software repositories such as GitHub.</p>
       </div>
@@ -80,7 +80,7 @@
         <div class="col s12 m4">
           <div class="icon-block">
             <h3 class="center deep-teal-text"><i class="material-icons">fingerprint</i></h3>
-            <h5 class="center">Feature extraction from source files</h5>
+            <h5 class="center light">Feature extraction from source files</h5>
             <p class="light">The features are extracted from source code via language-aware parsers (for identifier names, libraries, doc strings, text strings, comments, etc.).  Identifier expansion methods convert short identifiers (e.g., "readfromdb") to more meaningful strings ("read from database").</p>
           </div>
         </div>
@@ -88,7 +88,7 @@
         <div class="col s12 m4">
           <div class="icon-block">
             <h3 class="center deep-teal-text"><i class="material-icons">view_quilt</i></h3>
-            <h5 class="center">Ontology-based classification</h5>
+            <h5 class="center light">Ontology-based classification</h5>
             <p class="light">The features are used as input into supervised, hierarchical multi-label classifiers to label software with respect to predefined ontologies. We are using a combination of <a href="https://github.com/allysonlister/swo">SWO</a>, the <a href="http://id.loc.gov">Library of Congress Subject Headings</a>, and custom ontologies.</p>
           </div>
         </div>
@@ -96,7 +96,7 @@
         <div class="col s12 m4">
           <div class="icon-block">
             <h3 class="center deep-teal-text"><i class="material-icons">sort</i></h3>
-            <h5 class="center">Hierarchical software catalog</h5>
+            <h5 class="center light">Hierarchical software catalog</h5>
             <p class="light">Software can be placed in a hierarchical browser organized by the ontology. Search can be augmented with ontologies to recognize when users are looking for known types of features.</p>
           </div>
         </div>
@@ -109,8 +109,8 @@
 
   <footer class="page-footer grey">
     <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
+      <div class="row center">
+        <div class="col s12 m4">
           <h5 class="white-text">Project members</h5>
           <ul>
             <li><a class="white-text" href="http://www.cds.caltech.edu/~mhucka">Dr. Michael Hucka</a></li>
@@ -118,11 +118,18 @@
             <li><a class="white-text" href="http://www.cds.caltech.edu/~doyle">Dr. John Doyle</a></li>
           </ul>
         </div>
-        <div class="col l6 s12">
+        <div class="col s12 m4">
+          <h5 class="white-text">Support</h5>
+          <ul>
+            <li style="margin-bottom: -5px"><a class="white-text" href="https://nsf.gov"><img width="55px" src="graphics/nsf1.gif"/></a></li>
+            <li><a class="white-text" href="https://www.caltech.edu"><img width="120px" src="graphics/caltech-white.png"/></a></li>
+          </ul>
+        </div>
+        <div class="col s12 m4">
           <h5 class="white-text">More information</h5>
           <ul>
-            <li><a class="white-text" href="#">CASICS home page</a></li>
-            <li>(More coming soon)</li>
+            <li><a class="white-text" href="files/casics-poster-2016.pdf">2016 NSF meeting poster</a></li>
+            <li><a class="white-text" href="files/casics-poster-2017.pdf">2017 NSF meeting poster</a></li>
           </ul>
         </div>
       </div>
