@@ -5,8 +5,6 @@ CASICS landing page
 
 This repository contains the code for the project landing page at https://casics.github.io/overview/
 
-----
-
 *Author*:      [Michael Hucka](http://github.com/mhucka).
 
 *License*:      Unless otherwise noted, this content is licensed under the [MIT](https://opensource.org/licenses/MIT) license.
