@@ -18,6 +18,8 @@ This repository contains the code for the project landing page at https://casics
 
 The CASICS landing page is a simple front page for advertising the CASICS project.  It is built on top of of the [MaterializeCSS](http://materializecss.com) front-end framework.
 
+For notes about how this site is set up, please visit the [wiki pages](https://github.com/casics/overview/wiki).
+
 ⁇ Getting help and support
 --------------------------
 
