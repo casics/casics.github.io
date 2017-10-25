@@ -1,7 +1,7 @@
 CASICS landing page
 ===================
 
-<img align="right" src="graphics/casics-logo-small.png">
+<img width="100px" align="right" src="graphics/casics-logo-small.svg">
 
 This repository contains the code for the project landing page at https://casics.github.io/overview/
 
