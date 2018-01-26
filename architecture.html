@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>CASICS: Comprehensive and Automated Software Inventory Creation System</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <!-- <nav class="grey lighten-1" role="navigation">
+       <div class="nav-wrapper container">
+       <ul class="right hide-on-med-and-down">
+       <li><a href="#">Navbar Link</a></li>
+       </ul>
+       <ul id="nav-mobile" class="side-nav">
+       <li><a href="#">Navbar Link</a></li>
+       </ul>
+
+       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+       </div>
+       </nav>
+     -->
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <a href="index.html"><strong><i style="vertical-align: bottom" class="material-icons">arrow_back</i></strong> Back to the top</a>
+      <a style="color: #186B8D" href="index.html"><h1 class="header center deep-teal-text"><img width="70px" style="padding-right: 15px"  src="graphics/casics-logo-in-steel-teal.svg" onerror="this.src='graphics/casics-logo-in-steel-teal.png'" />CASICS</h1></a>
+      <div class="row center">
+        <h5 class="header col s12 light">Overview of the CASICS system architecture</h5>
+      </div>
+      <div class="row light">
+        <p class="light">The goal of the Comprehensive and Automated Software Inventory Creation System (CASICS) project is to develop machine learning techniques to analyze source code in software repositories.  The basic approach is this:
+          <ul class="square-bullets browser-default">
+            <li class="light">Collect software source code from open-source repositories</li>
+            <li class="light">Extract features from source code files to obtain identifiers, documentation strings, comments, and other text, and use identifier expansion methods convert short identifiers to more meaningful strings</li>
+            <li class="light">Use the features as input into supervised, hierarchical multi-label classifiers to label software with respect to predefined ontologies</li>
+            <li class="light">Use the ontologies to (1) present the classified results in an organized, hierarchical browser view and (2) support more intelligent software search</li>
+          </ul>
+        </p>
+        <p class="light">The following diagram illustrates the main software components in the overall CASICS scheme.
+        </p>
+
+        <div class="row center">
+          <img width="480pt" src="graphics/casics-system-diagram.svg">
+        </div>
+
+        <div class="row light">
+          <p>The modular components can run on separate computers and communicate over TCP/IP network connections using either the <a href="https://docs.mongodb.com/manual/contents/">MondoDB API</a>, the Python <a href="https://pythonhosted.org/Pyro4/">Pyro4 API</a>, direct file system access, or a REST API (notably, <a href="https://developer.github.com/v3/">GitHub's REST API</a>).</p>
+          <ul class="square-bullets browser-default">
+            <li class="light"><a href="https://github.com/casics/collector"><strong>Collector</strong></a>: a package to interact with a repository hosting service such as GitHub and collect information about software projects.  It extracts such things as name, owner, description, "readme" file (if any), list of files at the top level, and other metadata, and stores it all in the CASICS Database.
+            </li>
+
+            <li class="light"><a href="https://github.com/casics/downloader"><strong>Downloader</strong></a>: a package that takes a list of GitHub repositories and downloads the files to a local filesystem. This permits analysis tools to work on local copies of the source files.
+            </li>
+
+            <li class="light"><a href="https://github.com/casics/extractor"><strong>Extractor</strong></a>: a package that extracts identifiers, text and other features from source code files.  It uses language-aware parsers to extract elements intelligently. For example, it extracts Python imports, class names, function names, variable names, comments, and other elements as separate lists of each kind, so that machine learning methods can treat them differently.
+            </li>
+
+            <li class="light"><a href="https://github.com/casics/casicsdb"><strong>CASICS Database</strong></a>: a MongoDB-based database that stores the metadata extracted from the code repositories.  The other modules in CASICS communicate with the database for their various needs.
+            </li>
+
+            <li class="light"><a href="https://github.com/casics/annotator"><strong>Annotator</strong></a>: a browser-based annotation interface used by CASICS annotators to add ontology terms to repository entries in the database.  The CASICS Annotator is written in a combination of Python and JavaScript.
+
+            <li class="light"><strong>Analyzers</strong>: multiple packages that each perform some kind of inference using source code files and repository metadata.
+            </li>
+          </ul>
+
+          <p>As part of developing CASICS, we also developed some independent software libraries that can be used for other purposes and projects:
+          <ul class="square-bullets browser-default">
+            <li class="light"><a href="https://github.com/casics/locterms"><strong>LoCTerms</strong></a> (<em>Library of Congress Terms</em>): a database of terms from the <a href="http://id.loc.gov/authorities/subjects.html">Library of Congress Subject Headings (LCSH)</a> controlled vocabulary.  We converted a copy of the LCSH terms into a MongoDB database that makes explicit the <a href="https://en.wikipedia.org/wiki/Hyponymy_and_hypernymy">"is-a"</a> relationships between LCSH terms.  LoCTerms is a system that allows other programs to use normal MongoDB network API calls to search for LCSH terms and their relationships.
+            </li>
+
+            <li class="light"><a href="https://github.com/casics/nostril"><strong>Nostril</strong></a> (<em>Nonsense String Evaluator</em>): a Python module that infers whether a given medium-length string of characters is likely to be random gibberish or something meaningful.   Its main use is to decide whether short strings returned by source code mining methods are likely to be (e.g.) program identifiers, or random characters or other non-identifier strings.
+            </li>
+
+            <li class="light"><a href="https://github.com/casics/spiral"><strong>Spiral</strong></a> (<em>SPlitters for IdentifieRs: A Library</em>): a Python library of functions for splitting identifiers found in source code files.
+            </li>
+
+          </ul>
+
+    </div>
+  </div>
+
+
+  <footer class="page-footer grey">
+    <div class="container">
+      <div class="row center">
+        <div class="col s12 m4">
+          <h5 class="white-text">Project members</h5>
+          <ul>
+            <li><a class="white-text" href="http://www.cds.caltech.edu/~mhucka">Dr. Michael Hucka</a></li>
+            <li><a class="white-text" href="http://www.cacr.caltech.edu/~mjg">Dr. Matthew Graham</a></li>
+            <li><a class="white-text" href="http://www.cds.caltech.edu/~doyle">Dr. John Doyle</a></li>
+          </ul>
+        </div>
+        <div class="col s12 m4">
+          <h5 class="white-text">Support</h5>
+          <ul>
+            <li style="margin-bottom: -5px"><a class="white-text" href="https://nsf.gov"><img width="55px" src="graphics/nsf1.gif"/></a></li>
+            <li><a class="white-text" href="https://www.caltech.edu"><img width="120px" src="graphics/caltech-white.png"/></a></li>
+          </ul>
+        </div>
+        <div class="col s12 m4">
+          <h5 class="white-text">More information</h5>
+          <ul>
+            <li><a class="white-text" href="files/casics-poster-2016.pdf">2016 NSF meeting poster</a></li>
+            <li><a class="white-text" href="files/casics-poster-2017.pdf">2017 NSF meeting poster</a></li>
+            <li><a class="white-text" href="https://arxiv.org/abs/1605.02265">"Software search is not a science"</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        <small>Produced by <a class="cyan-text text-lighten-3" href="http://www.cds.caltech.edu/~mhucka/">Mike Hucka</a></small>.
+        <small>Page theme modified from <a class="cyan-text text-lighten-3" href="http://materializecss.com">Materialize</a></small>.
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
