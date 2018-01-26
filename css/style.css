@@ -12,3 +12,11 @@
 .icon-block .material-icons {
 	font-size: inherit;
 }
+
+ul.square-bullets {
+  list-style-type: square;
+}
+
+ul.square-bullets li {
+  margin-top: 0.5em;
+}
