@@ -29,11 +29,11 @@ Funding for this and other CASICS work has come from the [National Science Found
 <br>
 <div align="center">
   <a href="https://www.nsf.gov">
-    <img width="105" height="105" src=".graphics/NSF.svg">
+    <img width="105" height="105" src="graphics/NSF.svg">
   </a>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://www.caltech.edu">
-    <img width="100" height="100" src=".graphics/caltech-round.svg">
+    <img width="100" height="100" src="graphics/caltech-round.svg">
   </a>
 </div>
